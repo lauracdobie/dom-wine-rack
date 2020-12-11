@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const newBottle = document.querySelector('#add-new-wine');
     newBottle.addEventListener('submit', addWineToWineRack);
+
+    const emptyWineRack = document.querySelector('#empty-wine-rack');
+    emptyWineRack.addEventListener('click', drinkAllTheWine);
 });
 
 const addWineToWineRack = function(event) {
@@ -24,5 +27,10 @@ const addWineToWineRack = function(event) {
     wineRack.appendChild(newWine);
     document.getElementById('add-new-wine').reset();
 };
+
+const drinkAllTheWine = function (event) {
+    const rackContents = document.querySelector('ul');
+    rackContents.innerHTML = '';
+}
 
 
